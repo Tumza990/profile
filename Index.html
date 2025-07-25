@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tumelo Matlakeng | Software Developer Portfolio</title>
+  <style>
+    :root {
+      --primary: #ffc107;
+      --secondary: #1a1a1a;
+      --text: #f0f0f0;
+      --bg-dark: rgba(30, 30, 30, 0.9);
+      --card-bg: rgba(40, 40, 40, 0.7);
+    }
+    
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                  url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b') center/cover fixed;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      background: var(--bg-dark);
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+      border: 1px solid rgba(255, 193, 7, 0.2);
+      animation: fadeIn 1s ease-out;
+      position: relative;
+    }
+
+    .resume-download {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: var(--primary);
+      letter-spacing: 0.5px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      border-bottom: 2px solid rgba(255, 193, 7, 0.3);
+      padding-bottom: 0.5rem;
+      margin-top: 0;
+    }
+
+    section {
+      background: var(--bg-dark);
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 193, 7, 0.1);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: slideUp 0.8s ease-out;
+      animation-fill-mode: both;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--primary);
+      transition: all 0.3s ease;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    }
+
+    .project-features {
+      margin: 1rem 0;
+      padding-left: 1.2rem;
+      list-style-type: none;
+    }
+
+    .project-features li {
+      margin-bottom: 0.6rem;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    .project-features li:before {
+      content: "▹";
+      color: var(--primary);
+      position: absolute;
+      left: 0;
+    }
+
+    .btn {
+      background: rgba(255, 193, 7, 0.2);
+      color: var(--primary);
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      border: 1px solid var(--primary);
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+
+    .btn:hover {
+      background: rgba(255, 193, 7, 0.3);
+      transform: scale(1.05);
+      text-decoration: none;
+    }
+
+    .btn-resume {
+      background: rgba(255, 193, 7, 0.3);
+      padding: 0.8rem 1.5rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-resume:hover {
+      background: rgba(255, 193, 7, 0.4);
+    }
+
+    .btn-resume::before {
+      content: "↓";
+      font-size: 1.2em;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { 
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    section:nth-child(1) { animation-delay: 0.1s; }
+    section:nth-child(2) { animation-delay: 0.2s; }
+    section:nth-child(3) { animation-delay: 0.3s; }
+    section:nth-child(4) { animation-delay: 0.4s; }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      header {
+        padding: 1.5rem;
+        padding-top: 4rem;
+      }
+      
+      .resume-download {
+        top: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        text-align: center;
+      }
+      
+      section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="resume-download">
+        <a href="resume.pdf" download class="btn btn-resume">Download My Resume</a>
+      </div>
+      <h1>Tumelo Godwill Matlakeng</h1>
+      <p>Final Year BSc IT Student | Software Developer</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I'm a final-year BSc IT student at North-West University specializing in software development with database systems. I create practical solutions that combine technical requirements with business needs, with expertise in SQL databases and desktop application development.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      
+      <div class="project-card">
+        <h3>Library Management System</h3>
+        <p>Complete desktop application for Potchefstroom Public Library:</p>
+        
+        <ul class="project-features">
+          <li><strong>Technologies:</strong> Visual Studio, SQL Database (8 tables)</li>
+          <li>Member registration and card management</li>
+          <li>Book lending/return system with fines</li>
+          <li>Inventory management for library assets</li>
+          <li>Transaction recording system</li>
+        </ul>
+        
+        <a href="https://github.com/CMPG213GROUP4/Group4CMPGPPL" target="_blank" rel="noopener" class="btn">
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="project-card">
+        <h3>Portfolio Repository</h3>
+        <p>Source code for this responsive portfolio website:</p>
+        
+        <ul class="project-features">
+          <li><strong>Technologies:</strong> HTML5, CSS3, GitHub Pages</li>
+          <li>Mobile-friendly responsive design</li>
+          <li>Clean semantic code structure</li>
+          <li>CSS animations and transitions</li>
+        </ul>
+        
+        <a href="https://github.com/Tumza990/My-Profile" target="_blank" rel="noopener" class="btn">
+          View GitHub Repository
+        </a>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Languages</h4>
+          <ul class="project-features">
+            <li>SQL</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>Python</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Development</h4>
+          <ul class="project-features">
+            <li>Visual Studio</li>
+            <li>.NET Framework</li>
+            <li>Database Design</li>
+            <li>Windows Forms</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Web</h4>
+          <ul class="project-features">
+            <li>HTML5/CSS3</li>
+            <li>JavaScript</li>
+            <li>Git/GitHub</li>
+            <li>Responsive Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:mowtumelo@gmail.com">mowtumelo@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/Tumza990" target="_blank" rel="noopener">github.com/Tumza990</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/tumelo-matlakeng-1240a0193/" target="_blank" rel="noopener">linkedin.com/in/tumelo-matlakeng</a></li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
